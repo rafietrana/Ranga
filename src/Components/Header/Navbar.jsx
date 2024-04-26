@@ -56,7 +56,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-center font-mono text-[30px] py-[20px]">
-          Gioun
+          Ranga
         </div>
         <div className="navbar-end">
           <div className="flex gap-2 pr-3 justify-center items-center">
