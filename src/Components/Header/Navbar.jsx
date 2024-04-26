@@ -10,6 +10,8 @@ const Navbar = () => {
       <li>
         <NavLink to='/'>Home</NavLink>
         <NavLink to='/addArtAndCraft'>Add Art And Craft</NavLink>
+        <NavLink to='/allArtAndCraftItems'>All Art & Craft Items</NavLink>
+        <NavLink to='/myArtAndCraftList'>My Art&Craft List</NavLink>
       </li>
   );
   

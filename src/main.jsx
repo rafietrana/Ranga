@@ -11,6 +11,10 @@ import Login from './Components/Login/Login.jsx';
 import Register from './Components/Register/Register.jsx';
 import AuthProvider from './Providers/AuthProvider.jsx';
 import AddArtAndCraft from './Components/AddArtAndCraft/AddArtAndCraft.jsx';
+import AllArtAndCraftItems from './Components/AllArtAndCraftItems/AllArtAndCraftItems.jsx';
+import MyArtAndCraftList from './Components/MyArtAndCraftList/MyArtAndCraftList.jsx';
+import ArtAndCraftDetails from './Components/ArtAndCraftDetails/ArtAndCraftDetails.jsx';
+import UpdateArtAndCraft from './Components/UpdateArtAndCraft/UpdateArtAndCraft.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +37,22 @@ const router = createBrowserRouter([
         path: "/AddArtAndCraft",
         element: <AddArtAndCraft/>,
       },
+      {
+        path: "/allArtAndCraftItems",
+        element: <AllArtAndCraftItems/>,
+        loader: () => fetch("http://localhost:5000/artAndCraft")
+      },
+      {
+        path: "/myArtAndCraftList",
+        element: <MyArtAndCraftList/>,
+        loader: () => fetch("http://localhost:5000/artAndCraft")
+      },
+      {
+        path: "/updateArtAndCraftSng/:id",
+        element: <UpdateArtAndCraft/>,
+        loader: ({params}) => fetch(`http://localhost:5000/artAndCraft/${params.id}`)
+      },
+   
     ],
   },
 ]);
