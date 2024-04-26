@@ -6,11 +6,11 @@ import toast from "react-hot-toast";
 const Navbar = () => {
   const { user, logOut  } = useContext(AuthContext);
   const links = (
-    <NavLink to='/'>
+    
       <li>
-        <a>Home</a>
+        <NavLink to='/'>Home</NavLink>
+        <NavLink to='/addArtAndCraft'>Add Art And Craft</NavLink>
       </li>
-    </NavLink>
   );
   
   const handleLogout = () => {
