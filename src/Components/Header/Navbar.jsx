@@ -1,10 +1,18 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, logOut  } = useContext(AuthContext);
+  const links = (
+    <NavLink to='/'>
+      <li>
+        <a>Home</a>
+      </li>
+    </NavLink>
+  );
+  
   const handleLogout = () => {
     logOut()
       .then((result) => {
@@ -43,15 +51,7 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
-                <a>Homepage</a>
-              </li>
-              <li>
-                <a>Portfolio</a>
-              </li>
-              <li>
-                <a>About</a>
-              </li>
+              {links}
             </ul>
           </div>
         </div>
