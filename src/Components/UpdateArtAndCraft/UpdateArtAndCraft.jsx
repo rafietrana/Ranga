@@ -181,10 +181,9 @@ const UpdateArtAndCraft = () => {
                   name="customization"
                   id="customization"
                   className="h-[50px] w-full bg-transparent border-black border pl-5"
-                  value={customization}
                 >
-                  <option value="yes">yes</option>
-                  <option value="no">no</option>
+                  <option value="yes" selected={customization === "yes"}>yes</option>
+                  <option value="no" selected={customization === "no"}>no</option>
                 </select>
               </div>
               <div className="text-left w-full">
@@ -193,10 +192,9 @@ const UpdateArtAndCraft = () => {
                   name="stockStatus"
                   id="stockStatus"
                   className="h-[50px] w-full bg-transparent border-black border pl-5"
-                  value={stockStatus}
                 >
-                  <option value="In stock">In stock</option>
-                  <option value="Made to Order">Made to Order</option>
+                  <option value="In stock" selected={stockStatus === "In stock"}>In stock</option>
+                  <option value="Made to Order" selected={stockStatus === "Made to Order"}>Made to Order</option>
                 </select>
               </div>
             </div>
