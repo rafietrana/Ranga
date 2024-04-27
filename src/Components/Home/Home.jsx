@@ -4,7 +4,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 // import './styles.css';
 import { Pagination } from 'swiper/modules';
+import { useLoaderData } from "react-router-dom";
+import SingleItem from "../MyArtAndCraftList/SingleItem";
+import HomeSingle from "./HomeSingle";
 const Home = () => {
+  const allArtAndCraft = useLoaderData();
   return (
     <>
       <Swiper
@@ -49,6 +53,21 @@ const Home = () => {
         </div>
         </SwiperSlide>
       </Swiper>
+      <div className="bg-[#E5E2DB]">
+      <div className="flex justify-center text-center">
+        <div className="bg-[#ffffff] p-10 my-[100px] max-w-[9000px] shadow">
+          <h1 className="text-[30px] font-mono">Art and Craft</h1>
+          <p className="max-w-[300px] m-auto mt-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <div className="mt-10 grid grid-cols-4 gap-5">
+            {allArtAndCraft.map((artAndCraft) => (
+              <HomeSingle key={artAndCraft.id} artAndCraft={artAndCraft} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
     </>
   );
 };

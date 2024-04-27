@@ -73,9 +73,9 @@ const AllArtAndCraftItems = () => {
 
                       <td> {allArtAndCraft.stockStatus}</td>
                       <th className="flex gap-2 mt-3">
-                        <span className="cursor-pointer badge badge-neutral">
+                        <Link to={`/DetailsArtAndCraft/${allArtAndCraft._id}`}><span className="cursor-pointer badge badge-neutral">
                           Details
-                        </span>
+                        </span></Link>
                       </th>
                     </tr>
                   ))}
