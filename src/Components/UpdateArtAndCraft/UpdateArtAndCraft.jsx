@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const UpdateArtAndCraft = () => {
-    const {user} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const updateArtAndCraftSng = useLoaderData();
   const {
     _id,
@@ -94,6 +94,9 @@ const UpdateArtAndCraft = () => {
           <p className="max-w-[300px] m-auto mt-2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
+          <div className="w-full flex justify-center">
+            <img className="w-40 rounded-full border-[#a3a3a337] border-[5px] h-40 mt-5 object-cover" src={photoURL} alt="" />
+          </div>
           <div className="mt-7 items-center">
             <div className="flex mt-3 gap-3">
               <div className="text-left w-full">
@@ -182,8 +185,12 @@ const UpdateArtAndCraft = () => {
                   id="customization"
                   className="h-[50px] w-full bg-transparent border-black border pl-5"
                 >
-                  <option value="yes" selected={customization === "yes"}>yes</option>
-                  <option value="no" selected={customization === "no"}>no</option>
+                  <option value="yes" selected={customization === "yes"}>
+                    yes
+                  </option>
+                  <option value="no" selected={customization === "no"}>
+                    no
+                  </option>
                 </select>
               </div>
               <div className="text-left w-full">
@@ -193,8 +200,18 @@ const UpdateArtAndCraft = () => {
                   id="stockStatus"
                   className="h-[50px] w-full bg-transparent border-black border pl-5"
                 >
-                  <option value="In stock" selected={stockStatus === "In stock"}>In stock</option>
-                  <option value="Made to Order" selected={stockStatus === "Made to Order"}>Made to Order</option>
+                  <option
+                    value="In stock"
+                    selected={stockStatus === "In stock"}
+                  >
+                    In stock
+                  </option>
+                  <option
+                    value="Made to Order"
+                    selected={stockStatus === "Made to Order"}
+                  >
+                    Made to Order
+                  </option>
                 </select>
               </div>
             </div>
