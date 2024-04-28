@@ -16,13 +16,13 @@ const LandscapePainting = () => {
       <Fade>
         <div className="bg-[#E5E2DB] p-2">
           <Helmet>
-            <title>Ranga-Cartoon-Drawing</title>
+            <title>Ranga-Landscape-Painting</title>
           </Helmet>
           <div className="flex justify-center text-center">
             <div className="bg-[#ffffff] rounded-md p-5 md:p-10 my-[100px] max-w-[9000px] shadow">
-              <h1 className="text-[30px] font-mono">Cartoon-Drawing</h1>
-              <p className="max-w-[300px] m-auto mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              <h1 className="text-[30px] font-mono">Landscape Painting</h1>
+              <p className="max-w-[600px] m-auto mt-2">
+              Introducing our latest additions for landscape painting! Explore a variety of brushes, paints, and canvases to capture the beauty of nature. Bring your landscapes to life with our high-quality supplies.
               </p>
               <div className="dropdown dropdown-hover py-5"></div>
               <div className="md:mt-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
