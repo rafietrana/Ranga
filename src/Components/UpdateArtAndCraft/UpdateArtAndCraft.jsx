@@ -3,6 +3,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const UpdateArtAndCraft = () => {
   const { user } = useContext(AuthContext);
@@ -84,6 +85,9 @@ const UpdateArtAndCraft = () => {
   };
   return (
     <div className="bg-[#E5E2DB]">
+      <Helmet>
+        <title>Ranga-Update Art & Craft</title>
+      </Helmet>
       <Toaster />
       <form
         onSubmit={handleUpdateArtAndCraft}

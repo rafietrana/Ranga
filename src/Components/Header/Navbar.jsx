@@ -1,9 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const [theme, setTheme] = useState('light');
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+    const localTheme = localStorage.getItem('theme');
+    document.querySelector('html').setAttribute('data-theme', localTheme)
+  },[theme]);
+  const handleToggle = e =>{
+    if(e.target.checked){
+      setTheme('dark')
+    }else{
+      setTheme('light')
+    }
+  }
+  console.log(theme)
   const { user, logOut } = useContext(AuthContext);
   const links = (
     <li>
@@ -61,12 +75,12 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <div className="flex gap-2 pr-3 justify-center items-center">
-          <label className="swap swap-rotate">
+            <label className="swap swap-rotate mr-1">
               {/* this hidden checkbox controls the state */}
               <input
+                onChange={handleToggle}
                 type="checkbox"
                 className="theme-controller"
-                value="synthwave"
               />
 
               {/* sun icon */}
@@ -94,64 +108,28 @@ const Navbar = () => {
                 alt=""
               />
             ) : (
-              <button className="btn btn-sm h-[40px] bg-[#FFFFFF]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                  />
-                </svg>
-              </button>
+              <></>
             )}
             {user && user ? (
               <button
                 onClick={handleLogout}
                 className="btn btn-sm h-[40px] bg-[#FFFFFF]"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15"
-                  />
-                </svg>
                 Logout
               </button>
             ) : (
-              <Link to="/login">
-                <button className="btn btn-sm h-[40px] bg-[#FFFFFF]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"
-                    />
-                  </svg>
-                  Login
-                </button>
-              </Link>
+              <div className="flex gap-2">
+                <Link to="/login">
+                  <button className="btn btn-sm h-[40px] bg-[#FFFFFF]">
+                    Login
+                  </button>
+                </Link>
+                <Link to="/registration">
+                  <button className="btn btn-sm h-[40px] bg-[#FFFFFF]">
+                    Register
+                  </button>
+                </Link>
+              </div>
             )}
           </div>
         </div>

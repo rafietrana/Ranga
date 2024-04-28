@@ -18,7 +18,7 @@ const HomeSingle = ({ artAndCraft }) => {
     details,
   } = artAndCraft;
   return (
-    <div className="card bg-[#E5E2DB] card-compact w-96 shadow-xl rounded-none">
+    <div className="card rounded-md bg-[#E5E2DB] card-compact w-96 shadow-xl">
       <figure>
         <img
           className="h-[250px] w-full object-cover"
@@ -68,18 +68,6 @@ const HomeSingle = ({ artAndCraft }) => {
             {rating}
           </p>
         </div>
-        <p className="text-[16px]">
-          {customization === "yes" ? (
-            <span className="badge text-white badge-success">
-              {customization}
-            </span>
-          ) : (
-            <span className="badge text-white badge-error">
-              {customization}
-            </span>
-          )}
-        </p>
-        <p className="text-[16px]">{stockStatus}</p>
         <div className="flex justify-start gap-2 mt-2">
           <Link to={`/DetailsArtAndCraft/${_id}`}>
             <button className="bg-transparent py-2 border-black border text-black px-5 rounded-full mt-1 hover:bg-black hover:text-white mb-2">

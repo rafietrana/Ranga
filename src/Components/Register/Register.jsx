@@ -3,6 +3,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
@@ -34,6 +35,7 @@ const Register = () => {
                       }).catch((error) => {
                       });
                     toast.success("User Created Successfully!");
+                    e.target.reset();
                 })
                 .catch((error) => {
                     console.log(error)
@@ -43,6 +45,9 @@ const Register = () => {
     }
     return (
         <div className='bg-[#E5E2DB]'>
+            <Helmet>
+        <title>Ranga-Registration</title>
+      </Helmet>
             <Toaster />
             <form onSubmit={handleRegister} className='flex justify-center text-center'>
                 <div className='bg-[#ffffff] p-10 my-20 shadow'>

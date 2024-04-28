@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const AddArtAndCraft = () => {
   const { user  } = useContext(AuthContext);
@@ -60,12 +61,16 @@ const AddArtAndCraft = () => {
           console.log(data);
           if (data.insertedId) {
             toast.success("Successfully Added!");
+            e.target.reset();
           }
         });
     }
   };
   return (
     <div className="bg-[#E5E2DB]">
+      <Helmet>
+        <title>Ranga-Add Art & Craft</title>
+      </Helmet>
       <Toaster />
       <form
         onSubmit={handleRegister}

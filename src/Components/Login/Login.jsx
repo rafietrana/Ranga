@@ -1,10 +1,13 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { loginUser, googleLogin, gitHubLogin } = useContext(AuthContext);
+  const location = useLocation();
+    const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -26,6 +29,9 @@ const Login = () => {
         .then((result) => {
           console.log(result);
           toast.success("User Login Successfully!");
+          setTimeout(() => {
+            navigate(location.state ? location.state : "/")
+          }, 1000);
         })
         .catch((error) => {
           console.log(error);
@@ -39,6 +45,9 @@ const Login = () => {
     .then((result) => {
       console.log(result)
       toast.success("Account successfully login.");
+      setTimeout(() => {
+        navigate(location.state ? location.state : "/")
+      }, 1000);
     })
     .catch((error) => {
       console.log(error)
@@ -50,6 +59,9 @@ const Login = () => {
     .then((result) => {
       console.log(result)
       toast.success("Account successfully login.");
+      setTimeout(() => {
+        navigate(location.state ? location.state : "/")
+      }, 1000);
     })
     .catch((error) => {
       console.log(error)
@@ -58,6 +70,9 @@ const Login = () => {
   }
   return (
     <div className="bg-[#E5E2DB] overflow-hidden">
+      <Helmet>
+        <title>Ranga-Login</title>
+      </Helmet>
       <Toaster />
       <div className="bg-[#ffffff] max-w-[600px] p-10 m-auto my-20">
       <form onSubmit={handleLogin} className="flex justify-center text-center">

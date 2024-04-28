@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -6,6 +7,9 @@ const AllArtAndCraftItems = () => {
   const allArtAndCraft = useLoaderData();
   return (
     <div className="bg-[#E5E2DB]">
+      <Helmet>
+        <title>Ranga-All Art & Craft Items</title>
+      </Helmet>
       <div className="flex justify-center text-center">
         <div className="bg-[#ffffff] p-10 my-[100px] max-w-[9000px] shadow">
           <h1 className="text-[30px] font-mono">All Art and Craft Items</h1>

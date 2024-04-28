@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link, useLoaderData } from 'react-router-dom';
 
 const DetailsArtAndCraft = () => {
@@ -19,6 +20,9 @@ const DetailsArtAndCraft = () => {
       } = artAndCraft;
     return (
         <div className='container m-auto mt-20'>
+            <Helmet>
+        <title>Ranga-Details</title>
+      </Helmet>
             <div className='grid grid-cols-2 gap-20'>
                 <div>
                     <img className='w-full' src={photoURL} alt="image" />
