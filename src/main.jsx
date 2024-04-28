@@ -19,11 +19,13 @@ import CharcoalSketching from './Components/Category/CharcoalSketching';
 import OilPainting from './Components/Category/OilPainting';
 import PortraitDrawing from './Components/Category/PortraitDrawing';
 import WatercolourPainting from './Components/Category/WatercolourPainting';
+import ErrorPage from "./Components/ErrorPage/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

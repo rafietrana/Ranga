@@ -3,6 +3,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { Fade } from "react-awesome-reveal";
 
 const AddArtAndCraft = () => {
   const { user  } = useContext(AuthContext);
@@ -67,7 +68,9 @@ const AddArtAndCraft = () => {
     }
   };
   return (
-    <div className="bg-[#E5E2DB]">
+    <>
+    <Fade>
+    <div className="bg-[#E5E2DB] p-2">
       <Helmet>
         <title>Ranga-Add Art & Craft</title>
       </Helmet>
@@ -76,13 +79,13 @@ const AddArtAndCraft = () => {
         onSubmit={handleRegister}
         className="flex justify-center text-center"
       >
-        <div className="bg-[#ffffff] p-10 my-[100px] max-w-[9000px] shadow">
+        <div className="bg-[#ffffff] rounded-md p-5 md:p-10 my-[100px] max-w-[9000px] shadow">
           <h1 className="text-[30px] font-mono">Add New Art And Craft</h1>
-          <p className="max-w-[300px] m-auto mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <p className="max-w-[600px] m-auto mt-2">
+          Explore our latest collection of art and craft supplies! From paints to brushes, beads to paper, find everything you need to unleash your creativity and bring your ideas to life.
           </p>
           <div className="mt-7 items-center">
-            <div className="flex mt-3 gap-3">
+            <div className="flex flex-col md:flex-row mt-3 gap-3">
               <div className="text-left w-full">
                 <p className="mb-1 font-mono">Item Name</p>
                 <input
@@ -113,7 +116,7 @@ const AddArtAndCraft = () => {
                 </select>
               </div>
             </div>
-            <div className="flex mt-3 gap-3">
+            <div className="flex flex-col md:flex-row mt-3 gap-3">
               <div className="text-left w-full">
                 <p className="mb-1 font-mono">Rating</p>
                 <input
@@ -133,7 +136,7 @@ const AddArtAndCraft = () => {
                 />
               </div>
             </div>
-            <div className="flex mt-3 gap-3">
+            <div className="flex flex-col md:flex-row mt-3 gap-3">
               <div className="text-left w-full">
                 <p className="mb-1 font-mono">Customization</p>
                 <select
@@ -163,7 +166,7 @@ const AddArtAndCraft = () => {
                 </select>
               </div>
             </div>
-            <div className="flex mt-3 gap-3">
+            <div className="flex flex-col md:flex-row mt-3 gap-3">
               <div className="text-left w-full">
                 <p className="mb-1 font-mono">Processing Time</p>
                 <input
@@ -198,11 +201,7 @@ const AddArtAndCraft = () => {
             </div>
             <div className="text-left text-[14px]">
               <p className="max-w-[900px] py-3">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Soluta, neque sit? Ipsa, cum vitae ullam optio, quas facilis
-                magni quasi laborum vel assumenda cumque quod atque porro
-                recusandae suscipit, nesciunt temporibus voluptatibus iure
-                corrupti?
+              Discover a world of creativity with our newest art and craft supplies! From vibrant paints to intricate beads, unleash your imagination and bring your artistic visions to life.
               </p>
             </div>
             <div className="flex justify-center">
@@ -214,6 +213,8 @@ const AddArtAndCraft = () => {
         </div>
       </form>
     </div>
+    </Fade>
+    </>
   );
 };
 

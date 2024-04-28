@@ -18,15 +18,15 @@ const HomeSingle = ({ artAndCraft }) => {
     details,
   } = artAndCraft;
   return (
-    <div className="card rounded-md bg-[#E5E2DB] card-compact w-96 shadow-xl">
-      <figure>
+    <div className=" rounded-md bg-[#E5E2DB]  shadow-xl md:flex items-center ">
+      <div className="w-full">
         <img
-          className="h-[250px] w-full object-cover"
+          className="h-[250px] rounded md:rounded-l w-full object-cover"
           src={photoURL}
           alt="image"
         />
-      </figure>
-      <div className="p-5 text-left">
+      </div>
+      <div className="w-full p-5 text-left">
         <h2 className="card-title">{itemName}</h2>
         <div className="flex gap-3">
           <p className="text-[20px] flex items-center gap-1">

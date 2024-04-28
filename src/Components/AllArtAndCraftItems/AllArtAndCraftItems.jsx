@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -6,17 +7,19 @@ import Swal from "sweetalert2";
 const AllArtAndCraftItems = () => {
   const allArtAndCraft = useLoaderData();
   return (
+    <>
+    <Fade>
     <div className="bg-[#E5E2DB]">
       <Helmet>
         <title>Ranga-All Art & Craft Items</title>
       </Helmet>
-      <div className="flex justify-center text-center">
-        <div className="bg-[#ffffff] p-10 my-[100px] max-w-[9000px] shadow">
+      <div className=" text-center">
+        <div className="bg-[#ffffff] p-10 shadow">
           <h1 className="text-[30px] font-mono">All Art and Craft Items</h1>
-          <p className="max-w-[300px] m-auto mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <p className="max-w-[600px] m-auto mt-2">
+          Discover our latest collection of art and craft supplies! From paints and brushes to beads and paper, find everything you need to fuel your creativity and bring your artistic ideas to life.
           </p>
-          <div className="mt-7 items-center">
+          <div className="mt-7">
             <div className="overflow-x-auto">
               <table className="table">
                 {/* head */}
@@ -90,6 +93,8 @@ const AllArtAndCraftItems = () => {
         </div>
       </div>
     </div>
+    </Fade>
+    </>
   );
 };
 

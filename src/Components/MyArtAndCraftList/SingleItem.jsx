@@ -49,7 +49,7 @@ const SingleItem = ({ artAndCraft }) => {
     });
   };
   return (
-    <div className="card bg-[#E5E2DB] card-compact w-96 shadow-xl rounded-none">
+    <div className="card bg-[#E5E2DB] card-compact rounded-md shadow-xl">
       <figure>
         <img
           className="h-[250px] w-full object-cover"
@@ -99,7 +99,7 @@ const SingleItem = ({ artAndCraft }) => {
             {rating}
           </p>
         </div>
-        <p className="text-[16px]">
+        <p className="text-[16px]"><span className="font-semibold">Customization : </span>
           {customization === "yes" ? (
             <span className="badge text-white badge-success">
               {customization}
@@ -110,7 +110,7 @@ const SingleItem = ({ artAndCraft }) => {
             </span>
           )}
         </p>
-        <p className="text-[16px]">{stockStatus}</p>
+        <p className="text-[16px]"><span className="font-semibold">Stock Status :</span> {stockStatus}</p>
         <div className="flex justify-start gap-2 mt-2">
           <Link to={`/updateArtAndCraftSng/${_id}`}>
             <button className="bg-transparent py-2 border-black border text-black px-5 rounded-full mt-1 hover:bg-black hover:text-white mb-2">

@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 import { Helmet } from "react-helmet";
+import { Fade } from "react-awesome-reveal";
 
 const Login = () => {
   const { loginUser, googleLogin, gitHubLogin } = useContext(AuthContext);
@@ -69,12 +70,13 @@ const Login = () => {
     })
   }
   return (
-    <div className="bg-[#E5E2DB] overflow-hidden">
+    <>
+    <Fade><div className="bg-[#E5E2DB] px-2 rounded-md overflow-hidden">
       <Helmet>
         <title>Ranga-Login</title>
       </Helmet>
       <Toaster />
-      <div className="bg-[#ffffff] max-w-[600px] p-10 m-auto my-20">
+      <div className="bg-[#ffffff] max-w-[600px] rounded-md p-10 m-auto my-20">
       <form onSubmit={handleLogin} className="flex justify-center text-center">
         <div className="">
           <h1 className="text-[30px] font-mono">Login</h1>
@@ -136,7 +138,8 @@ const Login = () => {
         </button>
       </div>
       </div>
-    </div>
+    </div></Fade>
+    </>
   );
 };
 
