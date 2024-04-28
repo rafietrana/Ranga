@@ -42,11 +42,7 @@ const Navbar = () => {
     <div className="navbar bg-[#F6F3EE]">
       <div className="navbar-start">
         <div className="dropdown">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle"
-          >
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -61,7 +57,6 @@ const Navbar = () => {
                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
               />
             </svg>
-            
           </div>
           <ul
             tabIndex={0}
@@ -77,22 +72,34 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <div className="flex gap-2 pr-3 justify-center items-center">
-          
           {user && user.photoURL ? (
             <div>
               <div className="dropdown dropdown-hover">
-                <div tabIndex={0} role="" className=" bg-[#FFFFFF] rounded-full mt-2">
-                  <img className="rounded-full object-cover  h-[45px] w-[45px]" src={user.photoURL} alt="image" />
+                <div
+                  tabIndex={0}
+                  role=""
+                  className=" bg-[#FFFFFF] rounded-full mt-2"
+                >
+                  <img
+                    className="rounded-full object-cover  h-[45px] w-[45px]"
+                    src={user.photoURL}
+                    alt="image"
+                  />
                 </div>
                 <ul
                   tabIndex={0}
                   className="dropdown-content z-[20] menu p-2 shadow bg-base-100 rounded-box w-40 -ml-5"
                 >
                   <li>
-                    <a>Item 1</a>
+                    <a className="font-bold">{user.displayName}</a>
                   </li>
                   <li>
-                    <a>Item 2</a>
+                    <button
+                      onClick={handleLogout}
+                      className="btn btn-sm h-[40px] bg-[#FFFFFF]"
+                    >
+                      Logout
+                    </button>
                   </li>
                 </ul>
               </div>
