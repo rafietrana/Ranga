@@ -1,4 +1,4 @@
-# Ranga - Art and Craft Hub
+# Ranga - (Art and Craft Hub)
 
 Welcome to Ranga - Art and Craft Hub, your one-stop destination for all things related to art and craft. Whether you are interested in Landscape Painting, Portrait Drawing, Watercolour Painting, Oil Painting, Charcoal Sketching, or Cartoon Drawing, we've got you covered!
 
