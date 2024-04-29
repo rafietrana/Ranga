@@ -63,7 +63,7 @@ const UpdateArtAndCraft = () => {
       toast.error("Input must not be empty!");
     } else {
       // send data to the server
-      fetch(`http://localhost:5000/artAndCraft/${_id}`, {
+      fetch(`https://server-site-wheat-three.vercel.app/artAndCraft/${_id}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

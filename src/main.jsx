@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/artAndCraft"),
+        loader: () => fetch("https://server-site-wheat-three.vercel.app/artAndCraft"),
       },
       {
         path: "/login",
@@ -43,32 +43,32 @@ const router = createBrowserRouter([
       {
         path: "/Cartoon Drawing",
         element: <CartoonDrawing />,
-        loader: () => fetch("http://localhost:5000/artAndCraft"),
+        loader: () => fetch("https://server-site-wheat-three.vercel.app/artAndCraft"),
       },
       {
         path: "/Landscape Painting",
         element: <LandscapePainting />,
-        loader: () => fetch("http://localhost:5000/artAndCraft"),
+        loader: () => fetch("https://server-site-wheat-three.vercel.app/artAndCraft"),
       },
       {
         path: "/Charcoal Sketching",
         element: <CharcoalSketching />,
-        loader: () => fetch("http://localhost:5000/artAndCraft"),
+        loader: () => fetch("https://server-site-wheat-three.vercel.app/artAndCraft"),
       },
       {
         path: "/Oil Painting",
         element: <OilPainting />,
-        loader: () => fetch("http://localhost:5000/artAndCraft"),
+        loader: () => fetch("https://server-site-wheat-three.vercel.app/artAndCraft"),
       },
       {
         path: "/Portrait Drawing",
         element: <PortraitDrawing />,
-        loader: () => fetch("http://localhost:5000/artAndCraft"),
+        loader: () => fetch("https://server-site-wheat-three.vercel.app/artAndCraft"),
       },
       {
         path: "/Watercolour Painting",
         element: <WatercolourPainting />,
-        loader: () => fetch("http://localhost:5000/artAndCraft"),
+        loader: () => fetch("https://server-site-wheat-three.vercel.app/artAndCraft"),
       },
       {
         path: "/AddArtAndCraft",
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
       {
         path: "/allArtAndCraftItems",
         element: <AllArtAndCraftItems />,
-        loader: () => fetch("http://localhost:5000/artAndCraft"),
+        loader: () => fetch("https://server-site-wheat-three.vercel.app/artAndCraft"),
       },
       {
         path: "/myArtAndCraftList",
@@ -90,7 +90,7 @@ const router = createBrowserRouter([
             <MyArtAndCraftList />
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/artAndCraft"),
+        loader: () => fetch("https://server-site-wheat-three.vercel.app/artAndCraft"),
       },
       {
         path: "/updateArtAndCraftSng/:id",
@@ -100,7 +100,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/artAndCraft/${params.id}`),
+          fetch(`https://server-site-wheat-three.vercel.app/artAndCraft/${params.id}`),
       },
       {
         path: "/DetailsArtAndCraft/:id",
@@ -110,7 +110,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/artAndCraft/${params.id}`),
+          fetch(`https://server-site-wheat-three.vercel.app/artAndCraft/${params.id}`),
       },
     ],
   },

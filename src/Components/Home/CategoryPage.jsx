@@ -5,7 +5,7 @@ const CategoryPage = () => {
     const [categories, setCategories] = useState([]);
   
     useEffect(() => {
-        fetch("http://localhost:5000/artAndCraft")
+        fetch("https://server-site-wheat-three.vercel.app/artAndCraft")
         .then(res => res.json())
         .then(data => {
             // Filter unique categories
