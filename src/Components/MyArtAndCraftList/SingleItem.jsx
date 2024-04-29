@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const SingleItem = ({ artAndCraft }) => {
+  const [arts, setArts] = useState(artAndCraft);
   const {
     _id,
     name,
@@ -16,9 +17,9 @@ const SingleItem = ({ artAndCraft }) => {
     processingTime,
     photoURL,
     details,
-  } = artAndCraft;
-  const handleDelete = (_id) => {
-    console.log(_id);
+  } = arts;
+  const handleDelete = (id) => {
+    console.log(id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -29,7 +30,7 @@ const SingleItem = ({ artAndCraft }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/artAndCraft/${_id}`, {
+        fetch(`http://localhost:5000/artAndCraft/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -41,7 +42,7 @@ const SingleItem = ({ artAndCraft }) => {
                 text: "Your item has been deleted.",
                 icon: "success",
               });
-              const remaining = arts.filter((cof) => cof._id !== _id);
+              const remaining = arts.filter(art => art._id !== id);
               setArts(remaining);
             }
           });
