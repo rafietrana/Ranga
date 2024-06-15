@@ -103,6 +103,8 @@ Welcome to Ranga - Art and Craft Hub, your one-stop destination for all things r
 - Toast/sweet alert for success and error messages.
 - Implemented react-simple-typewriter and react-awesome-reveal packages.
 
+## Server
 [Visit Ranga Server Site - Art and Craft Hub](https://github.com/Zioun/Assignment-10-Server)
 
+## Demo
 [Visit Ranga - Art and Craft Hub](https://assignment-10-a2856.web.app/)
