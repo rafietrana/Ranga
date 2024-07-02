@@ -25,7 +25,7 @@ Ranga is a web platform designed to cater to artists and craft enthusiasts of al
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/Zioun/Forum.git
+    git clone https://github.com/Zioun/Ranga.git
     ```
 2. Navigate to the project directory:
     ```sh
