@@ -21,14 +21,27 @@ Ranga is a web platform designed to cater to artists and craft enthusiasts of al
 - **Message Alerts:** Toast/sweet alert notifications for success and error messages.
 - **Technologies:** Built using React, Node.js, Express.js, MongoDB, Firebase authentication, and more.
 
+## Installation Steps
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/Zioun/Forum.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd folder-name
+    ```
+3. Install dependencies:
+    ```sh
+    npm install
+    ```
+
 ## Getting Started
 
 To get started with Ranga - Art and Craft Hub:
 
-1. Clone this repository.
-2. Install dependencies using `npm install`.
-3. Set up Firebase and MongoDB credentials (refer to environment variables).
-4. Run the development server using `npm start`.
+1. Set up Firebase and MongoDB credentials (refer to environment variables).
+2. Run the development server using `npm start`.
 
 ## Server
 
