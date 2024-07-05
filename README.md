@@ -2,9 +2,9 @@
 
 Welcome to Ranga - Art and Craft Hub, your ultimate destination for all things art and craft!
 
-## Introduction
+# introduction
 
-Ranga is a web platform designed to cater to artists and craft enthusiasts of all levels. Whether you're into Landscape Painting, Portrait Drawing, Watercolour or Oil Painting, Charcoal Sketching, or Cartoon Drawing, Ranga provides a comprehensive space to explore, create, and share your passion.
+A diagnostic management system website is an advanced platform designed to streamline the management and accessibility of diagnostic data for healthcare providers and patients. This system enhances efficiency by allowing secure login for doctors, patients, and administrators, facilitating patient record management, scheduling and handling diagnostic tests, generating comprehensive reports, and managing billing and payments. By leveraging the MERN stack (MongoDB, Express.js, React, and Node.js), the system ensures a seamless, dynamic, and secure user experience, ultimately improving the overall quality and speed of healthcare services.
 
 ## Features
 
